@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puzzle</title>
+</head>
+<body>
+    <!-- Instructions -->
+    <img src="./images.html/money.png" >
+    <p>the first one was pretty straightforward and light</p>
+    <p>its gonna get a lil harder now</p>
+
+    <!-- Encoded Clue -->
+    <a>uwuybrsffbgjowwgwozbgpqwnujowwgpihlgppylpppyulivcsfnhmcmyyrcvyfrv</a>
+    <h1></h1>
+
+    <!-- Password Input Section -->
+    <input id="pw" type="password" placeholder="get it right this time">
+    <button id="go">go</button>
+    <div id="msg"></div>
+
+    <script>
+        const PASSWORD = 'iihuifesbiuvbsduibviubdsuivbsdubvdsubcusdbcubzuiyztzuijaklnjjksnc';
+
+        const pw = document.getElementById('pw');
+        const btn = document.getElementById('go');
+        const msg = document.getElementById('msg');
+
+        function check() {
+            if (pw.value === PASSWORD) {
+                window.location.href = '3rdone.html';
+            } else {
+                msg.textContent = 'WRONG!';
+                pw.value = '';
+                pw.focus();
+            }
+        }
+
+        btn.addEventListener('click', check);
+        pw.addEventListener('keydown', e => {
+            if (e.key === 'Enter') check();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Centered Container */
+.centered-div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background-image: url('./pages/images.html/puzzlebrowallpaper.png');
+    background-size: cover;        /* Covers entire viewport */
+    background-position: center;   /* Centers the image */
+    background-repeat: no-repeat;  /* Doesn't tile the image */
+    background-attachment: fixed;  /* Image stays fixed while scrolling */
+}

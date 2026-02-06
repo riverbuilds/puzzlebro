@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 4</title>
+</head>
+<body>
+    <!-- Challenge Image -->
+    <img src="./images.html/fourthpuzzle.png" alt="Hint image">
+
+    <!-- Challenge Instructions -->
+    <p>enter password in one word</p>
+    <p>no spaces, answers 1-3 in order</p>
+    <p>Example: 1776530$verizon</p>
+
+    <!-- Password Input Section -->
+    <input id="pw" type="password" placeholder="you got this">
+    <button id="go">enter</button>
+    <div id="msg"></div>
+
+    <script>
+        const PASSWORD = '1926770$unitel';
+
+        const pw = document.getElementById('pw');
+        const btn = document.getElementById('go');
+        const msg = document.getElementById('msg');
+
+        function check() {
+            if (pw.value === PASSWORD) {
+                window.location.href = '5thpuzzle.html';
+            } else {
+                msg.textContent = 'Wrong boi';
+                pw.value = '';
+                pw.focus();
+            }
+        }
+
+        btn.addEventListener('click', check);
+        pw.addEventListener('keydown', e => {
+            if (e.key === 'Enter') check();
+        });
+    </script>
+</body>
+</html>

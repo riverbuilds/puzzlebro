@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puzzle</title>
+</head>
+<body>
+    <!-- Location Coordinates -->
+    <h2>8°56'35"N 125°32'33"E</h2>
+    <a>how many reviews do they have on facebook?</a>
+    <h1></h1>
+
+    <!-- Password Input Section -->
+    <input id="pw" type="password" placeholder="password">
+    <button id="go">guess</button>
+    <div id="msg"></div>
+
+    <script>
+        const PASSWORD = '21';
+
+        const pw = document.getElementById('pw');
+        const btn = document.getElementById('go');
+        const msg = document.getElementById('msg');
+
+        function check() {
+            if (pw.value === PASSWORD) {
+                window.location.href = '4rd.html';
+            } else {
+                msg.textContent = 'wrong boi';
+                pw.value = '';
+                pw.focus();
+            }
+        }
+
+        btn.addEventListener('click', check);
+        pw.addEventListener('keydown', e => {
+            if (e.key === 'Enter') check();
+        });
+    </script>
+</body>
+</html>
