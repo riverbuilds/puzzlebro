@@ -6,9 +6,36 @@
     <title>puzzle</title>
 </head>
 <body>
-<p>hooray, you did it</p>
-<h1> more coming soon</h1>
-<p> this was published february 6th, 6pm</p>
-<h1 size ="10"></h1>
+ <p>this one wONT be easier...?</p>
+    <p>coordinates of church on my graph+ map? ex:(50, 100)</p>
+     <img src="./images.html/sixth.png">
+
+<input id="pw" type="password" placeholder="test it">
+    <button id="go">enter</button>
+    <div id="msg"></div>
+   
+   
+    <script>
+        const PASSWORD = '(120,60)';
+
+        const pw = document.getElementById('pw');
+        const btn = document.getElementById('go');
+        const msg = document.getElementById('msg');
+
+        function check() {
+            if (pw.value === PASSWORD) {
+                window.location.href = '7thpuzzle.html';
+            } else {
+                msg.textContent = 'WRONG';
+                pw.value = '';
+                pw.focus();
+            }
+        }
+
+        btn.addEventListener('click', check);
+        pw.addEventListener('keydown', e => {
+            if (e.key === 'Enter') check();
+        });
+    </script>
 </body>
 </html>

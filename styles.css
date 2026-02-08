@@ -1,14 +1,53 @@
-/* Centered Container */
-.centered-div {
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     height: 100vh;
+    position: relative;
+    background-color: #ffffff;
+}
+
+/* Background Image as Element */
+.background-image {
+    display: none;
+}
+
+/* Logo Image */
+.logo-image {
+    max-width: none;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Main Container */
+.main-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-body {
-    background-image: url('./pages/images.html/vpuzzle.png');
-    background-size: cover;        /* Covers entire viewport */
-    background-position: center;   /* Centers the image */
-    background-repeat: no-repeat;  /* Doesn't tile the image */
-    background-attachment: fixed;  /* Image stays fixed while scrolling */
+
+/* Centered Container */
+.centered-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.centered-div img {
+    pointer-events: auto;
+}
+
+/* Skip Button */
+.skip-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
 }
