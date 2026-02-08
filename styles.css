@@ -6,7 +6,7 @@
     align-items: center;
 }
 body {
-    background-image: url('./pages/images.html/puzzlebrowallpaper.png');
+    background-image: url('./pages/images.html/vpuzzle.png');
     background-size: cover;        /* Covers entire viewport */
     background-position: center;   /* Centers the image */
     background-repeat: no-repeat;  /* Doesn't tile the image */

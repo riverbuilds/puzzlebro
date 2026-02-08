@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge 5</title>
+    <title>puzzle</title>
 </head>
 <body>
     <!-- Completion Message -->
-    <h1>YOU DID IT</h1>
-    <p>more coming soon</p>
-    <p>last updated feb 6 2026</p>
+    <p>this one might be a little easier</p>
+    <p>good luck!</p>
+<input id="pw" type="password" placeholder="type here">
+    <button id="go">enter</button>
+    <div id="msg"></div>
+    <img src="./images.html/five.png">
+   
+    <script>
+        const PASSWORD = '12';
+
+        const pw = document.getElementById('pw');
+        const btn = document.getElementById('go');
+        const msg = document.getElementById('msg');
+
+        function check() {
+            if (pw.value === PASSWORD) {
+                window.location.href = '6thpuzzle.html';
+            } else {
+                msg.textContent = 'Wrong boi';
+                pw.value = '';
+                pw.focus();
+            }
+        }
+
+        btn.addEventListener('click', check);
+        pw.addEventListener('keydown', e => {
+            if (e.key === 'Enter') check();
+        });
+    </script>
 </body>
 </html>
